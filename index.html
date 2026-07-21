@@ -67,6 +67,12 @@
     }
     .header__actions a:hover{color:var(--gold);transform:translateY(-1px)}
 
+    .menu-btn{display:none;flex-direction:column;justify-content:center;gap:5px;width:28px;height:28px;cursor:pointer;background:none;border:none;padding:0}
+    .menu-btn span{display:block;width:100%;height:2px;background:var(--cream);border-radius:2px;transition:all .35s ease;transform-origin:center}
+    #menu-check:checked~.menu-btn span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    #menu-check:checked~.menu-btn span:nth-child(2){opacity:0}
+    #menu-check:checked~.menu-btn span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
     .hero{
       height:100dvh;display:grid;grid-template-columns:55fr 45fr;
       position:relative;overflow:hidden
@@ -463,6 +469,7 @@
       .hero__tag-sub{font-size:6px}
     }
     @media(max-width:768px){
+      .header{padding:var(--g3) var(--g5)}
       .hero{display:flex;flex-direction:column;height:auto;min-height:100dvh;padding-bottom:40px}
       .hero__content{position:relative;z-index:2;padding:100px 24px 20px;background:transparent}
       .hero__title{font-size:32px;max-width:100%;margin-bottom:16px}
@@ -480,7 +487,15 @@
       .hero__bottle-base{width:90px;height:4px}
       .hero__bottle-shadow{width:120px;height:12px}
       .hero__tag{display:flex;bottom:10px;left:50%;transform:translateX(-50%);max-width:200px}
-      .hero__corner,.hero__mist,.hero__beam,.scroll-indicator,.particle,.nav,.hero__visual-bg{display:none}
+      .menu-btn{display:flex;position:relative;z-index:110}
+      .nav{display:flex;position:fixed;top:0;right:0;width:280px;height:100dvh;flex-direction:column;gap:0;padding:100px 32px 32px;background:rgba(22,22,22,.98);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);transform:translateX(100%);transition:transform .4s cubic-bezier(.4,0,.2,1);z-index:105}
+      .nav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:104}
+      #menu-check:checked~.nav{transform:translateX(0)}
+      #menu-check:checked~.nav-overlay{display:block}
+      .nav li{border-bottom:1px solid rgba(255,255,255,.06)}
+      .nav a{display:block;padding:18px 0;font-size:13px}
+      #menu-check:checked~.nav{transform:translateX(0)}
+      .hero__corner,.hero__mist,.hero__beam,.scroll-indicator,.particle,.hero__visual-bg{display:none}
     }
     @media(max-width:480px){
       .header{padding:var(--g2) var(--g4)}
@@ -508,6 +523,10 @@
 
   <header class="header">
     <a href="#" class="logo">HERIT<span>A</span>GE</a>
+    <input type="checkbox" id="menu-check" hidden>
+    <label for="menu-check" class="menu-btn" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </label>
     <nav aria-label="Основная навигация">
       <ul class="nav">
         <li><a href="#">Коллекция</a></li>
@@ -516,6 +535,7 @@
         <li><a href="#">Контакты</a></li>
       </ul>
     </nav>
+    <label for="menu-check" class="nav-overlay" aria-hidden="true"></label>
     <div class="header__actions">
       <a href="#" aria-label="Поиск">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
