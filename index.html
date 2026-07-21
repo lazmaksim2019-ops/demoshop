@@ -152,6 +152,14 @@
       position:relative;overflow:hidden;
       display:flex;align-items:center;justify-content:center
     }
+    .hero__corner{
+      position:absolute;width:48px;height:48px;z-index:2;opacity:0;
+      animation:fadeIn 1.8s ease .3s both
+    }
+    .hero__corner--tl{top:var(--g6);left:var(--g5);border-top:1px solid rgba(196,168,107,.1);border-left:1px solid rgba(196,168,107,.1)}
+    .hero__corner--tr{top:var(--g6);right:var(--g5);border-top:1px solid rgba(196,168,107,.1);border-right:1px solid rgba(196,168,107,.1)}
+    .hero__corner--bl{bottom:var(--g6);left:var(--g5);border-bottom:1px solid rgba(196,168,107,.1);border-left:1px solid rgba(196,168,107,.1)}
+    .hero__corner--br{bottom:var(--g6);right:var(--g5);border-bottom:1px solid rgba(196,168,107,.1);border-right:1px solid rgba(196,168,107,.1)}
     .hero__visual-bg{
       position:absolute;inset:0;
       background:
@@ -203,8 +211,14 @@
     .hero__bottle-cap-main{
       width:68px;height:32px;flex-shrink:0;position:relative;z-index:1;
       background:linear-gradient(180deg,var(--gold) 0%,#b89540 25%,var(--gold-dark) 50%,#9a7d35 75%,var(--gold) 100%);
+      background-size:200% 200%;
       border-radius:0 0 8px 8px;
-      box-shadow:0 8px 24px rgba(196,168,107,.12),inset 0 2px 4px rgba(255,255,255,.08)
+      box-shadow:0 8px 24px rgba(196,168,107,.12),inset 0 2px 4px rgba(255,255,255,.08);
+      animation:capShimmer 5s ease-in-out infinite
+    }
+    @keyframes capShimmer{
+      0%,100%{background-position:0% 0%}
+      50%{background-position:100% 0%}
     }
     .hero__bottle-cap-main::before{
       content:'';position:absolute;top:0;left:0;right:0;height:50%;
@@ -328,6 +342,30 @@
     }
     .hero__tag-price{
       font-size:10px;font-weight:400;color:var(--gold);margin-top:var(--g1)
+    }
+
+    .hero__mist{
+      position:absolute;border-radius:50%;pointer-events:none;z-index:1;
+      background:radial-gradient(circle,rgba(196,168,107,.06) 0%,transparent 70%);
+      animation:mistRise 8s ease-in-out infinite
+    }
+    .hero__mist:nth-child(1){
+      width:60px;height:60px;top:14%;left:38%;
+      animation-delay:0s;animation-duration:7s
+    }
+    .hero__mist:nth-child(2){
+      width:40px;height:40px;top:10%;left:55%;
+      animation-delay:3s;animation-duration:9s
+    }
+    .hero__mist:nth-child(3){
+      width:80px;height:80px;top:6%;left:45%;
+      animation-delay:5.5s;animation-duration:8s
+    }
+    @keyframes mistRise{
+      0%{opacity:0;transform:translateY(0) scale(.6)}
+      25%{opacity:1}
+      75%{opacity:.5}
+      100%{opacity:0;transform:translateY(-50px) scale(1.4)}
     }
 
     .particle{
@@ -522,6 +560,13 @@
     <div class="hero__visual">
       <div class="hero__visual-bg" aria-hidden="true"></div>
       <div class="hero__glow" aria-hidden="true"></div>
+      <div class="hero__corner hero__corner--tl" aria-hidden="true"></div>
+      <div class="hero__corner hero__corner--tr" aria-hidden="true"></div>
+      <div class="hero__corner hero__corner--bl" aria-hidden="true"></div>
+      <div class="hero__corner hero__corner--br" aria-hidden="true"></div>
+      <div class="hero__mist" aria-hidden="true"></div>
+      <div class="hero__mist" aria-hidden="true"></div>
+      <div class="hero__mist" aria-hidden="true"></div>
       <div class="hero__bottle">
         <div class="hero__bottle-cap">
           <div class="hero__bottle-cap-top"></div>
