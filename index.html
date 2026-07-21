@@ -159,12 +159,7 @@
         radial-gradient(ellipse 40% 35% at 30% 75%,rgba(245,240,235,.02) 0%,transparent 50%),
         linear-gradient(160deg,var(--charcoal) 0%,var(--charcoal-light) 50%,var(--charcoal) 100%)
     }
-    .hero__beam{
-      position:absolute;top:-10%;left:55%;width:2px;height:120%;
-      background:linear-gradient(180deg,transparent 0%,rgba(196,168,107,.04) 30%,rgba(245,240,235,.02) 60%,transparent 100%);
-      transform:rotate(-12deg);pointer-events:none;opacity:0;
-      animation:fadeIn 1.8s ease .3s both
-    }
+
     .hero__glow{
       position:absolute;width:75vh;height:75vh;max-width:640px;max-height:640px;
       border-radius:50%;top:48%;left:50%;transform:translate(-50%,-50%);
@@ -287,14 +282,6 @@
       border-radius:2px;
       display:flex;flex-direction:column;align-items:center;justify-content:center;
       gap:4px
-    }
-    .hero__bottle-label::before{
-      content:'';display:block;width:60%;height:1px;
-      background:rgba(196,168,107,.2);margin-bottom:2px
-    }
-    .hero__bottle-label::after{
-      content:'';display:block;width:40%;height:1px;
-      background:rgba(196,168,107,.12);margin-top:2px
     }
     .hero__bottle-label-t{
       display:block;font-size:7px;letter-spacing:3.5px;text-transform:uppercase;
@@ -474,7 +461,6 @@
         pointer-events:none;overflow:hidden
       }
       .hero__tag{display:none}
-      .hero__beam{display:none}
       .hero__glow{width:40vh;height:40vh}
       .hero__bottle-body{width:52px;height:124px}
       .hero__bottle-cap-top{width:36px;height:4px}
@@ -570,7 +556,6 @@
 
     <div class="hero__visual">
       <div class="hero__visual-bg" aria-hidden="true"></div>
-      <div class="hero__beam" aria-hidden="true"></div>
       <div class="hero__glow" aria-hidden="true"></div>
       <div class="hero__bottle">
         <div class="hero__bottle-cap">
