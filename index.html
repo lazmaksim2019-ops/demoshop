@@ -521,6 +521,73 @@
       .hero__visual{height:260px}
       .header__actions a{font-size:14px}
     }
+
+    .catalog{padding:var(--g12) var(--g10);max-width:1440px;margin:0 auto}
+    .catalog__header{text-align:center;margin-bottom:var(--g8)}
+    .catalog__label{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:var(--g2)}
+    .catalog__title{font-family:var(--font-serif);font-size:clamp(32px,4vw,52px);font-weight:300;color:var(--cream);margin-bottom:var(--g3);line-height:1.1}
+    .catalog__title i{font-style:italic;color:var(--gold)}
+    .catalog__desc{font-size:13px;color:var(--cream-dark);max-width:480px;margin:0 auto}
+    .catalog__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--g3)}
+    .product{position:relative;background:var(--charcoal-light);border-radius:16px;padding:var(--g4) var(--g3) var(--g3);display:flex;flex-direction:column;align-items:center;text-align:center;transition:transform .4s cubic-bezier(.4,0,.2,1),box-shadow .4s;overflow:hidden;cursor:pointer;border:1px solid rgba(255,255,255,.04)}
+    .product:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 20px 60px rgba(196,168,107,.15),0 0 0 1px rgba(196,168,107,.2)}
+    .product__badge{position:absolute;top:var(--g2);left:var(--g2);font-size:9px;letter-spacing:2px;text-transform:uppercase;padding:5px 12px;border-radius:20px;font-weight:500;z-index:2}
+    .product__badge--new{background:var(--gold);color:var(--charcoal)}
+    .product__badge--bestseller{background:rgba(196,168,107,.15);color:var(--gold);border:1px solid rgba(196,168,107,.3)}
+    .product__badge--limited{background:rgba(245,240,235,.1);color:var(--cream);border:1px solid rgba(245,240,235,.2)}
+    .product__visual{width:100%;height:200px;display:flex;align-items:center;justify-content:center;margin-bottom:var(--g3);position:relative}
+    .product__bottle{position:relative;display:flex;flex-direction:column;align-items:center}
+    .product__bottle-cap{display:flex;flex-direction:column;align-items:center}
+    .product__bottle-cap-top{width:36px;height:5px;background:linear-gradient(180deg,var(--gold-light),var(--gold-dark));border-radius:2px 2px 0 0}
+    .product__bottle-cap-main{width:30px;height:16px;background:linear-gradient(180deg,var(--gold),var(--gold-dark));border-radius:0 0 3px 3px}
+    .product__bottle-neck{width:12px;height:10px;background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.02));border-left:1px solid rgba(255,255,255,.06);border-right:1px solid rgba(255,255,255,.06)}
+    .product__bottle-body{width:52px;height:110px;border-radius:3px 3px 8px 8px;background:linear-gradient(135deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.06);position:relative;overflow:hidden}
+    .product__bottle-liquid{position:absolute;bottom:0;left:0;right:0;height:65%;border-radius:0 0 7px 7px;transition:height .5s ease}
+    .product__bottle-liquid--amber{background:linear-gradient(180deg,rgba(196,168,107,.4),rgba(196,168,107,.2))}
+    .product__bottle-liquid--sapphire{background:linear-gradient(180deg,rgba(70,90,140,.4),rgba(70,90,140,.2))}
+    .product__bottle-liquid--rose{background:linear-gradient(180deg,rgba(180,80,100,.4),rgba(180,80,100,.2))}
+    .product__bottle-liquid--emerald{background:linear-gradient(180deg,rgba(60,120,90,.4),rgba(60,120,90,.2))}
+    .product__bottle-liquid--topaz{background:linear-gradient(180deg,rgba(200,140,60,.4),rgba(200,140,60,.2))}
+    .product__bottle-liquid--onyx{background:linear-gradient(180deg,rgba(50,50,60,.5),rgba(50,50,60,.3))}
+    .product__bottle-liquid--citrine{background:linear-gradient(180deg,rgba(220,160,40,.4),rgba(220,160,40,.2))}
+    .product__bottle-liquid--violet{background:linear-gradient(180deg,rgba(120,60,140,.4),rgba(120,60,140,.2))}
+    .product__bottle-glass{position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.12) 0%,transparent 40%,rgba(255,255,255,.03) 70%,transparent 100%);border-radius:inherit;pointer-events:none}
+    .product__bottle-label{position:absolute;top:36%;left:12%;right:12%;height:22%;z-index:2;background:linear-gradient(135deg,rgba(196,168,107,.08) 0%,rgba(196,168,107,.02) 100%);border:1px solid rgba(196,168,107,.1);border-radius:2px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
+    .product__bottle-label-t{display:block;font-size:6px;letter-spacing:3px;text-transform:uppercase;color:rgba(196,168,107,.35);font-family:var(--font-sans);font-weight:400;line-height:1}
+    .product__bottle-label-m{display:block;font-size:7px;letter-spacing:1px;text-transform:uppercase;color:rgba(245,240,235,.2);font-family:var(--font-sans);font-weight:300;line-height:1}
+    .product__info{flex:1;display:flex;flex-direction:column;width:100%}
+    .product__name{font-family:var(--font-serif);font-size:20px;font-weight:400;color:var(--cream);margin-bottom:4px;line-height:1.2}
+    .product__notes{font-size:11px;color:var(--gold-light);letter-spacing:.5px;margin-bottom:var(--g1);font-weight:300}
+    .product__volume{font-size:10px;color:rgba(245,240,235,.35);letter-spacing:1px;margin-bottom:var(--g2)}
+    .product__price{font-family:var(--font-serif);font-size:22px;color:var(--gold);margin-bottom:var(--g2)}
+    .product__actions{display:flex;flex-direction:column;gap:var(--g1);width:100%;opacity:0;transform:translateY(8px);transition:opacity .35s,transform .35s}
+    .product:hover .product__actions{opacity:1;transform:translateY(0)}
+    .product__btn{display:flex;align-items:center;justify-content:center;gap:var(--g1);padding:12px 20px;border-radius:8px;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:500;cursor:pointer;transition:all .3s;text-decoration:none;font-family:var(--font-sans)}
+    .product__btn--primary{background:var(--gold);color:var(--charcoal);border:none}
+    .product__btn--primary:hover{background:var(--gold-light);transform:scale(1.02)}
+    .product__btn--outline{background:transparent;color:var(--cream-dark);border:1px solid rgba(255,255,255,.1)}
+    .product__btn--outline:hover{background:rgba(255,255,255,.04);color:var(--cream);border-color:rgba(255,255,255,.2)}
+
+    @media(max-width:1024px){
+      .catalog{padding:var(--g8) var(--g5)}
+      .catalog__grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:768px){
+      .catalog{padding:var(--g6) var(--g4)}
+      .catalog__grid{grid-template-columns:repeat(2,1fr);gap:var(--g2)}
+      .product__actions{opacity:1;transform:none}
+      .product__visual{height:150px}
+      .product__bottle-body{width:44px;height:90px}
+      .product__name{font-size:17px}
+      .product__price{font-size:19px}
+      .product__btn{padding:10px 16px;font-size:9px}
+    }
+    @media(max-width:480px){
+      .catalog{padding:var(--g4) var(--g3)}
+      .catalog__grid{grid-template-columns:1fr;gap:var(--g2)}
+      .product{padding:var(--g3) var(--g2) var(--g2)}
+      .product__visual{height:130px}
+    }
   </style>
 </head>
 <body>
@@ -533,10 +600,10 @@
     </label>
     <nav aria-label="Основная навигация">
       <ul class="nav">
-        <li><a href="#">Коллекция</a></li>
-        <li><a href="#">Ароматы</a></li>
-        <li><a href="#">О бренде</a></li>
-        <li><a href="#">Контакты</a></li>
+        <li><a href="#catalog" onclick="document.getElementById('menu-check').checked=false">Коллекция</a></li>
+        <li><a href="#" onclick="document.getElementById('menu-check').checked=false">Ароматы</a></li>
+        <li><a href="#" onclick="document.getElementById('menu-check').checked=false">О бренде</a></li>
+        <li><a href="#" onclick="document.getElementById('menu-check').checked=false">Контакты</a></li>
       </ul>
     </nav>
     <label for="menu-check" class="nav-overlay" aria-hidden="true"></label>
@@ -629,6 +696,232 @@
     <div class="scroll-indicator">
       <span>Листайте</span>
       <div class="scroll-indicator__line"></div>
+    </div>
+  </section>
+
+  <section class="catalog" id="catalog">
+    <header class="catalog__header">
+      <p class="catalog__label">Коллекция</p>
+      <h2 class="catalog__title">Избранные <i>ароматы</i></h2>
+      <p class="catalog__desc">Композиции, созданные из редких ингредиентов для тех, кто ценит настоящую парфюмерную культуру</p>
+    </header>
+    <div class="catalog__grid">
+      <article class="product">
+        <span class="product__badge product__badge--bestseller">Bestseller</span>
+        <div class="product__visual">
+          <div class="product__bottle">
+            <div class="product__bottle-cap">
+              <div class="product__bottle-cap-top"></div>
+              <div class="product__bottle-cap-main"></div>
+            </div>
+            <div class="product__bottle-neck"></div>
+            <div class="product__bottle-body">
+              <div class="product__bottle-liquid product__bottle-liquid--amber"></div>
+              <div class="product__bottle-label"><span class="product__bottle-label-t">HERITAGE</span><span class="product__bottle-label-m">Paris</span></div>
+              <div class="product__bottle-glass"></div>
+            </div>
+          </div>
+        </div>
+        <div class="product__info">
+          <h3 class="product__name">Nuit d'Or</h3>
+          <p class="product__notes">Oud &amp; Bergamot</p>
+          <p class="product__volume">50 ml / 100 ml</p>
+          <p class="product__price">₽ 24 500</p>
+          <div class="product__actions">
+            <a href="#" class="product__btn product__btn--primary">В корзину</a>
+            <a href="#" class="product__btn product__btn--outline">Быстрый просмотр</a>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <span class="product__badge product__badge--new">New</span>
+        <div class="product__visual">
+          <div class="product__bottle">
+            <div class="product__bottle-cap">
+              <div class="product__bottle-cap-top"></div>
+              <div class="product__bottle-cap-main"></div>
+            </div>
+            <div class="product__bottle-neck"></div>
+            <div class="product__bottle-body">
+              <div class="product__bottle-liquid product__bottle-liquid--sapphire"></div>
+              <div class="product__bottle-label"><span class="product__bottle-label-t">HERITAGE</span><span class="product__bottle-label-m">Paris</span></div>
+              <div class="product__bottle-glass"></div>
+            </div>
+          </div>
+        </div>
+        <div class="product__info">
+          <h3 class="product__name">Ame de Nuit</h3>
+          <p class="product__notes">Iris &amp; Amber</p>
+          <p class="product__volume">50 ml / 100 ml</p>
+          <p class="product__price">₽ 28 900</p>
+          <div class="product__actions">
+            <a href="#" class="product__btn product__btn--primary">В корзину</a>
+            <a href="#" class="product__btn product__btn--outline">Быстрый просмотр</a>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <span class="product__badge product__badge--limited">Limited</span>
+        <div class="product__visual">
+          <div class="product__bottle">
+            <div class="product__bottle-cap">
+              <div class="product__bottle-cap-top"></div>
+              <div class="product__bottle-cap-main"></div>
+            </div>
+            <div class="product__bottle-neck"></div>
+            <div class="product__bottle-body">
+              <div class="product__bottle-liquid product__bottle-liquid--rose"></div>
+              <div class="product__bottle-label"><span class="product__bottle-label-t">HERITAGE</span><span class="product__bottle-label-m">Paris</span></div>
+              <div class="product__bottle-glass"></div>
+            </div>
+          </div>
+        </div>
+        <div class="product__info">
+          <h3 class="product__name">Rose Éternelle</h3>
+          <p class="product__notes">Damask Rose &amp; Saffron</p>
+          <p class="product__volume">50 ml / 100 ml</p>
+          <p class="product__price">₽ 32 000</p>
+          <div class="product__actions">
+            <a href="#" class="product__btn product__btn--primary">В корзину</a>
+            <a href="#" class="product__btn product__btn--outline">Быстрый просмотр</a>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <span class="product__badge product__badge--bestseller">Bestseller</span>
+        <div class="product__visual">
+          <div class="product__bottle">
+            <div class="product__bottle-cap">
+              <div class="product__bottle-cap-top"></div>
+              <div class="product__bottle-cap-main"></div>
+            </div>
+            <div class="product__bottle-neck"></div>
+            <div class="product__bottle-body">
+              <div class="product__bottle-liquid product__bottle-liquid--emerald"></div>
+              <div class="product__bottle-label"><span class="product__bottle-label-t">HERITAGE</span><span class="product__bottle-label-m">Paris</span></div>
+              <div class="product__bottle-glass"></div>
+            </div>
+          </div>
+        </div>
+        <div class="product__info">
+          <h3 class="product__name">Forêt Noire</h3>
+          <p class="product__notes">Vetiver &amp; Cedar</p>
+          <p class="product__volume">50 ml / 100 ml</p>
+          <p class="product__price">₽ 22 800</p>
+          <div class="product__actions">
+            <a href="#" class="product__btn product__btn--primary">В корзину</a>
+            <a href="#" class="product__btn product__btn--outline">Быстрый просмотр</a>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <span class="product__badge product__badge--new">New</span>
+        <div class="product__visual">
+          <div class="product__bottle">
+            <div class="product__bottle-cap">
+              <div class="product__bottle-cap-top"></div>
+              <div class="product__bottle-cap-main"></div>
+            </div>
+            <div class="product__bottle-neck"></div>
+            <div class="product__bottle-body">
+              <div class="product__bottle-liquid product__bottle-liquid--topaz"></div>
+              <div class="product__bottle-label"><span class="product__bottle-label-t">HERITAGE</span><span class="product__bottle-label-m">Paris</span></div>
+              <div class="product__bottle-glass"></div>
+            </div>
+          </div>
+        </div>
+        <div class="product__info">
+          <h3 class="product__name">Soleil d'Hiver</h3>
+          <p class="product__notes">Tuberose &amp; Honey</p>
+          <p class="product__volume">50 ml / 100 ml</p>
+          <p class="product__price">₽ 26 500</p>
+          <div class="product__actions">
+            <a href="#" class="product__btn product__btn--primary">В корзину</a>
+            <a href="#" class="product__btn product__btn--outline">Быстрый просмотр</a>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <span class="product__badge product__badge--limited">Limited</span>
+        <div class="product__visual">
+          <div class="product__bottle">
+            <div class="product__bottle-cap">
+              <div class="product__bottle-cap-top"></div>
+              <div class="product__bottle-cap-main"></div>
+            </div>
+            <div class="product__bottle-neck"></div>
+            <div class="product__bottle-body">
+              <div class="product__bottle-liquid product__bottle-liquid--onyx"></div>
+              <div class="product__bottle-label"><span class="product__bottle-label-t">HERITAGE</span><span class="product__bottle-label-m">Paris</span></div>
+              <div class="product__bottle-glass"></div>
+            </div>
+          </div>
+        </div>
+        <div class="product__info">
+          <h3 class="product__name">Cuir de Russie</h3>
+          <p class="product__notes">Leather &amp; Incense</p>
+          <p class="product__volume">50 ml / 100 ml</p>
+          <p class="product__price">₽ 35 000</p>
+          <div class="product__actions">
+            <a href="#" class="product__btn product__btn--primary">В корзину</a>
+            <a href="#" class="product__btn product__btn--outline">Быстрый просмотр</a>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <span class="product__badge product__badge--bestseller">Bestseller</span>
+        <div class="product__visual">
+          <div class="product__bottle">
+            <div class="product__bottle-cap">
+              <div class="product__bottle-cap-top"></div>
+              <div class="product__bottle-cap-main"></div>
+            </div>
+            <div class="product__bottle-neck"></div>
+            <div class="product__bottle-body">
+              <div class="product__bottle-liquid product__bottle-liquid--citrine"></div>
+              <div class="product__bottle-label"><span class="product__bottle-label-t">HERITAGE</span><span class="product__bottle-label-m">Paris</span></div>
+              <div class="product__bottle-glass"></div>
+            </div>
+          </div>
+        </div>
+        <div class="product__info">
+          <h3 class="product__name">Miel Sauvage</h3>
+          <p class="product__notes">Neroli &amp; Beeswax</p>
+          <p class="product__volume">50 ml / 100 ml</p>
+          <p class="product__price">₽ 23 200</p>
+          <div class="product__actions">
+            <a href="#" class="product__btn product__btn--primary">В корзину</a>
+            <a href="#" class="product__btn product__btn--outline">Быстрый просмотр</a>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <span class="product__badge product__badge--new">New</span>
+        <div class="product__visual">
+          <div class="product__bottle">
+            <div class="product__bottle-cap">
+              <div class="product__bottle-cap-top"></div>
+              <div class="product__bottle-cap-main"></div>
+            </div>
+            <div class="product__bottle-neck"></div>
+            <div class="product__bottle-body">
+              <div class="product__bottle-liquid product__bottle-liquid--violet"></div>
+              <div class="product__bottle-label"><span class="product__bottle-label-t">HERITAGE</span><span class="product__bottle-label-m">Paris</span></div>
+              <div class="product__bottle-glass"></div>
+            </div>
+          </div>
+        </div>
+        <div class="product__info">
+          <h3 class="product__name">Lune d'Automne</h3>
+          <p class="product__notes">Fig &amp; Violet Leaf</p>
+          <p class="product__volume">50 ml / 100 ml</p>
+          <p class="product__price">₽ 27 800</p>
+          <div class="product__actions">
+            <a href="#" class="product__btn product__btn--primary">В корзину</a>
+            <a href="#" class="product__btn product__btn--outline">Быстрый просмотр</a>
+          </div>
+        </div>
+      </article>
     </div>
   </section>
   </main>
